@@ -1,0 +1,38 @@
+{
+	"name": "svelte-starter",
+	"version": "3.0.12",
+	"scripts": {
+		"gdoc": "node tasks/fetch-google.js",
+		"style": "node tasks/style-dictionary.js",
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"start": "svelte-kit start",
+		"lint": "prettier --check .",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@rollup/plugin-dsv": "^2.0.3",
+		"@sveltejs/adapter-static": "1.0.0-next.28",
+		"@sveltejs/kit": "1.0.0-next.265",
+		"archieml": "^0.5.0",
+		"autoprefixer": "^10.4.2",
+		"d3": "^7.3.0",
+		"feather-icons": "^4.28.0",
+		"lodash.debounce": "^4.0.8",
+		"node-fetch": "^3.2.0",
+		"postcss": "^8.4.6",
+		"prettier": "^2.5.1",
+		"prettier-plugin-svelte": "^2.6.0",
+		"rollup-plugin-svg": "^2.0.0",
+		"style-dictionary": "^3.1.1",
+		"svelte": "^3.46.4",
+		"svelte-preprocess": "^4.10.3",
+		"vite-plugin-svgstring": "^1.0.0"
+	},
+	"type": "module",
+	"engines": {
+		"node": ">= 16.13.0"
+	},
+	"browserslist": "> 0.5%, last 4 versions, not ie <= 11, not ie_mob <= 11",
+	"subdirectory": "svelte-starter"
+}
