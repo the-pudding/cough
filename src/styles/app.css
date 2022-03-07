@@ -1,14 +1,13 @@
 @import "variables.css";
 @import "normalize.css";
-@import "font.css";
 @import "reset.css";
 
 /* colors defined in variables.css */
 :root {
 	/* font */
-	--sans: "National 2 Web", Helvetica, Arial, sans-serif;
-	--serif: "Tiempos Text Web", Georgia, Times, serif;
-	--mono: Menlo, Consolas, Monaco, "Courier New", monospace;
+	--sans: Helvetica, Arial, sans-serif;
+	--serif: "Times New Roman", serif;
+	--mono: monospace;
 	
 	/* z-index */
 	--z-bottom: -100;
@@ -23,12 +22,51 @@
 	--color-bg: var(--color-white);
 	--color-fg: var(--color-gray-900);
 	--color-placeholder: var(--color-gray-500);
-  --color-link: var(--color-purple);
-  --color-focus: var(--color-red);
+  --color-link: blue;
+  --color-focus: blue;
   --color-form-bg: var(--color-gray-300);
 	--color-form-fg: var(--color-gray-900);
 	--color-border: var(--color-gray-300);
 	--color-selection: var(--color-gray-300);
-  --color-highlight: var(--color-yellow);
-	
+  --color-highlight: yellow;
+}
+
+main {
+	max-width: 60rem;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.2;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-top: 0;
+}
+
+p {
+	margin-top: 0;
+}
+
+td, th {
+	border: 1px solid currentColor;
+	font-weight: normal;
+}
+
+figure p {
+	margin-bottom: 0.25rem;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1;
+}
+
+figure p:last-of-type {
+	font-size: 0.9em;
+}
+
+figure table {
+	margin-bottom: 2rem;
 }

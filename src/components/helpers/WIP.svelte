@@ -1,17 +1,13 @@
-<div>🚧 This project is a work in progress. Please do not share the URL. 🚧</div>
+<div><p><em>This article is a preprint to be published in June 2022</em></p></div>
 
 <style>
   div {
-    position: fixed;
-    z-index: 999999999;
-    top: 0;
-    left: 0;
-    width: 100%;
     text-align: center;
-    padding: 1.25em;
-    background: pink;
-    color: black;
-    font-family: monospace;
-    font-size: 16px;
+    padding: 1rem;
+    background: var(--color-gray-100);
+    margin-bottom: 2rem;
+  }
+  p {
+    margin: 0;
   }
 </style>

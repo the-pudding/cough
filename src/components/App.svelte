@@ -1,7 +1,77 @@
 <script>
+  import { onMount } from "svelte";
   import WIP from "$components/helpers/WIP.svelte";
+  import Section from "$components/Section.svelte";
+  import Title from "$components/Title.svelte";
+  import References from "$components/References.svelte";
+  import copy from "$data/doc.json";
+
+  onMount(() => {
+    [].concat([...document.querySelectorAll("article a")]).forEach((node) => {
+      node.setAttribute("target", "_blank");
+    });
+  });
 </script>
 
 <WIP />
+<article>
+  <div class="page">
+    <Title />
+    <section id="abstract">
+      <p><strong><em>Abstract- </em>{@html copy.abstract}</strong></p>
+    </section>
 
-<h1>Cough</h1>
+    <section id="keywords">
+      <p><strong><em>Keywords- </em>{@html copy.keywords}</strong></p>
+    </section>
+
+    <Section numeral="I" title="Introduction" content={copy.introduction} />
+    <Section numeral="II" title="Methods and Materials" content={copy.methods} />
+  </div>
+
+  <div class="page">
+    <Section numeral="III" title="Results" content={copy.results} />
+  </div>
+
+  <div class="page">
+    <Section numeral="IV" title="Discussion" content={copy.discussion} />
+    <Section numeral="V" title="Conclusions" content={copy.conclusions} />
+  </div>
+
+  <div class="page">
+    <Section title="Acknowledgement" content={copy.acknowledgement} />
+    <References />
+  </div>
+</article>
+
+<style>
+  article {
+    counter-reset: page-number;
+  }
+
+  .page {
+    position: relative;
+    counter-increment: page-number;
+  }
+
+  .page:after {
+    content: "Page " counter(page-number);
+    display: block;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  @media only screen and (min-width: 1024px) {
+    .page {
+      /* height: 700px; */
+      /* background: pink; */
+      border-bottom: 1px solid var(--color-gray-500);
+      margin-bottom: 4rem;
+      padding-bottom: 6rem;
+      column-count: 2;
+      column-gap: 1rem;
+    }
+  }
+</style>
