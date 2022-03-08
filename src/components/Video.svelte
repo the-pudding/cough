@@ -4,13 +4,12 @@
   export let fig;
   export let caption;
 
-  let w;
   let yt;
 </script>
 
 <figure>
   <div class="inner">
-    <div class="image" bind:clientWidth={w}>
+    <div class="image">
       <img src="https://i.ytimg.com/vi/{id}/maxresdefault.jpg" alt="coughs in the film {film}" />
     </div>
     {#if yt}
@@ -29,7 +28,7 @@
   </div>
   <figcaption>
     Fig. {fig}
-    {caption} <button on:click={() => (yt = true)}>Play Clip</button>
+    {caption}. <button on:click={() => (yt = true)}>Play Clip</button>
   </figcaption>
 </figure>
 

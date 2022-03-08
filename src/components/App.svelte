@@ -40,7 +40,7 @@
 
   <div class="page">
     <Section title="Acknowledgement" content={copy.acknowledgement} />
-    <References />
+    <References title="References" content={copy.references} />
   </div>
 </article>
 
