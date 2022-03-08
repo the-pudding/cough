@@ -1,10 +1,13 @@
 <script>
   import { onMount } from "svelte";
   import WIP from "$components/helpers/WIP.svelte";
-  import Section from "$components/Section.svelte";
+  import Chunk from "$components/Chunk.svelte";
   import Title from "$components/Title.svelte";
   import References from "$components/References.svelte";
   import copy from "$data/doc.json";
+  import parsePages from "$utils/parsePages.js";
+
+  const pages = parsePages(copy);
 
   onMount(() => {
     [].concat([...document.querySelectorAll("article a")]).forEach((node) => {
@@ -15,17 +18,27 @@
 
 <WIP />
 <article>
-  <div class="page">
-    <Title />
-    <section id="abstract">
-      <p><strong><em>Abstract- </em>{@html copy.abstract}</strong></p>
-    </section>
+  {#each pages as content, i}
+    <div class="page">
+      {#if i === 0}
+        <Title />
+        <section id="abstract">
+          <p><strong><em>Abstract- </em>{@html copy.abstract}</strong></p>
+        </section>
 
-    <section id="keywords">
-      <p><strong><em>Keywords- </em>{@html copy.keywords}</strong></p>
-    </section>
+        <section id="keywords">
+          <p><strong><em>Keywords- </em>{@html copy.keywords}</strong></p>
+        </section>
+      {/if}
 
-    <Section numeral="I" title="Introduction" content={copy.introduction} />
+      {#each content as { type, value }}
+        <Chunk {type} {value} />
+      {/each}
+    </div>
+  {/each}
+
+  <!-- <div class="page">
+    
     <Section numeral="II" title="Methods and Materials" content={copy.methods} />
   </div>
 
@@ -41,7 +54,7 @@
   <div class="page">
     <Section title="Acknowledgement" content={copy.acknowledgement} />
     <References title="References" content={copy.references} />
-  </div>
+  </div> -->
 </article>
 
 <style>
@@ -67,11 +80,12 @@
     .page {
       /* height: 700px; */
       /* background: pink; */
+
       border-bottom: 1px solid var(--color-gray-500);
       margin-bottom: 4rem;
       padding-bottom: 6rem;
       column-count: 2;
-      column-gap: 1rem;
+      column-gap: 2rem;
     }
   }
 </style>

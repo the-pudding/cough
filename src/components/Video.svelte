@@ -57,6 +57,10 @@
     font-size: 0.9em;
   }
 
+  img {
+    width: 100%;
+  }
+
   button {
     padding: 0;
     background: transparent;
