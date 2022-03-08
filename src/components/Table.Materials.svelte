@@ -1,6 +1,6 @@
 <figure>
   <p>Table 1</p>
-  <p>Cough Database</p>
+  <p>(Fake) Cough Database</p>
   <table>
     <thead>
       <th>Decade</th>
