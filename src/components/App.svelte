@@ -16,7 +16,7 @@
 
     [].concat([...document.querySelectorAll(".page")]).forEach((node, i) => {
       const { height } = node.getBoundingClientRect();
-      console.log(i + 1, "-", height);
+      console.log(i + 1, "-", Math.round(height));
     });
   });
 </script>
