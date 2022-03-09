@@ -13,6 +13,11 @@
     [].concat([...document.querySelectorAll("article a")]).forEach((node) => {
       node.setAttribute("target", "_blank");
     });
+
+    [].concat([...document.querySelectorAll(".page")]).forEach((node, i) => {
+      const { height } = node.getBoundingClientRect();
+      console.log(i + 1, "-", height);
+    });
   });
 </script>
 
