@@ -10,9 +10,11 @@
 </script>
 
 <figure>
-  <p>Table 1</p>
-  <p>Films Analyzed by Year</p>
-  <Table {columns} {rows} />
+  <div class="inner">
+    <p>Table 1</p>
+    <p>Films Analyzed by Year</p>
+    <Table {columns} {rows} />
+  </div>
 </figure>
 
 <style>

@@ -11,9 +11,11 @@
 </script>
 
 <figure>
-  <p>Table 2</p>
-  <p>Coughgeist by Year</p>
-  <Table {columns} {rows} />
+  <div class="inner">
+    <p>Table 2</p>
+    <p>Coughgeist by Year</p>
+    <Table {columns} {rows} />
+  </div>
 </figure>
 
 <style>

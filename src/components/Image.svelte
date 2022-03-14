@@ -6,16 +6,19 @@
 </script>
 
 <figure class="figure-image">
-  <img src="assets/{file}" {alt} />
+  <div class="inner">
+    <img src="assets/{file}" {alt} />
+  </div>
   <figcaption>
-    Fig. {fig}
-    {@html caption}.
+    <div class="inner">
+      Fig. {fig}
+      {@html caption}.
+    </div>
   </figcaption>
 </figure>
 
 <style>
   figure {
-    max-width: 40em;
     margin: 0 auto;
     margin-bottom: 2rem;
     display: inline-block;

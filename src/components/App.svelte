@@ -4,6 +4,7 @@
   import Chunk from "$components/Chunk.svelte";
   import Title from "$components/Title.svelte";
   import References from "$components/References.svelte";
+  import Acknowledgements from "$components/Acknowledgements.svelte";
   import copy from "$data/doc.json";
   import parsePages from "$utils/parsePages.js";
 
@@ -43,6 +44,7 @@
     </div>
   {/each}
   <div class="page">
+    <Acknowledgements title="Acknowledgements" content={copy.acknowledgements} />
     <References title="References" content={copy.references} />
   </div>
 

@@ -79,6 +79,14 @@ figure table {
 	margin-bottom: 2rem;
 }
 
+/* flow */
 .figure-image:first-of-type img {
-	/* height: 40em; */
+	height: 36em;
+}
+
+
+figure .inner {
+	/* max-width: 25rem;
+	display: block;
+	margin: 0 auto; */
 }

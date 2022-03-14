@@ -1,9 +1,8 @@
 export default function parsePages(copy) {
-	const sections = ["introduction", "methods", "results", "discussion", "conclusions", "acknowledgement"];
+	const sections = ["introduction", "methods", "results", "discussion", "conclusions"];
 	const numerals = ["i", "ii", "iii", "iv", "v"];
 	const title = {
-		"methods": "Methods and Materials",
-		"acknowledgement": "Acknowledgements"
+		"methods": "Methods and Materials"
 	};
 
 	const pages = [[]];
