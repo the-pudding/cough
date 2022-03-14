@@ -6,7 +6,7 @@
 </script>
 
 <figure class="figure-image">
-  <img src="/assets/{file}" {alt} />
+  <img src="assets/{file}" {alt} />
   <figcaption>
     Fig. {fig}
     {@html caption}.
