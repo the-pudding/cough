@@ -92,10 +92,11 @@
       /* background: pink; */
 
       border-bottom: 1px solid var(--color-gray-500);
-      margin-bottom: 4rem;
-      padding-bottom: 6rem;
+      margin-bottom: 6rem;
+      /* padding-bottom: 6rem; */
       column-count: 2;
       column-gap: 2rem;
+      height: 800px;
     }
   }
 </style>
