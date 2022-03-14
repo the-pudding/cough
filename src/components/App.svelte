@@ -41,12 +41,12 @@
       {#each content as { type, value }}
         <Chunk {type} {value} />
       {/each}
+      {#if i === pages.length - 1}
+        <Acknowledgements title="Acknowledgements" content={copy.acknowledgements} />
+        <References title="References" content={copy.references} />
+      {/if}
     </div>
   {/each}
-  <div class="page">
-    <Acknowledgements title="Acknowledgements" content={copy.acknowledgements} />
-    <References title="References" content={copy.references} />
-  </div>
 
   <!-- <div class="page">
     
@@ -88,15 +88,13 @@
   }
   @media only screen and (min-width: 1024px) {
     .page {
-      /* height: 700px; */
       /* background: pink; */
-
       border-bottom: 1px solid var(--color-gray-500);
       margin-bottom: 6rem;
-      /* padding-bottom: 6rem; */
       column-count: 2;
       column-gap: 2rem;
       height: 800px;
+      overflow: hidden;
     }
   }
 </style>
