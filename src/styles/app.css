@@ -78,3 +78,7 @@ figure p:last-of-type {
 figure table {
 	margin-bottom: 2rem;
 }
+
+.figure-image:first-of-type img {
+	/* height: 40em; */
+}

@@ -28,7 +28,7 @@
   </div>
   <figcaption>
     Fig. {fig}
-    {caption}. <button on:click={() => (yt = true)}>Play Clip</button>
+    {@html caption}. <button on:click={() => (yt = true)}>Play Clip</button>
   </figcaption>
 </figure>
 
@@ -37,6 +37,7 @@
     max-width: 40em;
     margin: 0 auto;
     margin-bottom: 2rem;
+    display: inline-block;
   }
 
   .inner {

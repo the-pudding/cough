@@ -10,13 +10,14 @@
   const pages = parsePages(copy);
 
   onMount(() => {
-    [].concat([...document.querySelectorAll("article a")]).forEach((node) => {
+    setTimeout(() => {
+      [].concat([...document.querySelectorAll(".page")]).forEach((node, i) => {
+        const { height } = node.getBoundingClientRect();
+        console.log(i + 1, "-", Math.round(height));
+      });
+    }, 2000);
+    [].concat([...document.querySelectorAll("article a, figcaption a")]).forEach((node) => {
       node.setAttribute("target", "_blank");
-    });
-
-    [].concat([...document.querySelectorAll(".page")]).forEach((node, i) => {
-      const { height } = node.getBoundingClientRect();
-      console.log(i + 1, "-", Math.round(height));
     });
   });
 </script>
@@ -41,6 +42,9 @@
       {/each}
     </div>
   {/each}
+  <div class="page">
+    <References title="References" content={copy.references} />
+  </div>
 
   <!-- <div class="page">
     
@@ -58,7 +62,6 @@
 
   <div class="page">
     <Section title="Acknowledgement" content={copy.acknowledgement} />
-    <References title="References" content={copy.references} />
   </div> -->
 </article>
 

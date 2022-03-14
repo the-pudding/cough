@@ -35,11 +35,7 @@
           class:is-asc={dir === "asc"}
           class:is-desc={dir === "desc"}
         >
-          {#if sort}
-            <button on:click={() => onClick({ prop, i })}>{label}</button>
-          {:else}
-            {label}
-          {/if}
+          {label}
         </th>
       {/each}
     </tr>
@@ -60,8 +56,8 @@
 <style>
   table {
     width: 100%;
-    margin: 0 auto;
     table-layout: auto;
+    margin-top: 1em;
   }
 
   th.is-number,
@@ -89,24 +85,5 @@
     border: none;
     border-radius: 0;
     appearance: none;
-  }
-
-  th.is-sortable button:after {
-    content: "–";
-    display: inline-block;
-    text-align: center;
-    margin-left: 0.5em;
-    font-family: monospace;
-    vertical-align: middle;
-  }
-
-  th.is-sortable.is-asc button:after {
-    content: "▲";
-    visibility: visible;
-  }
-
-  th.is-sortable.is-desc button:after {
-    content: "▼";
-    visibility: visible;
   }
 </style>
