@@ -10,13 +10,17 @@
 
   const pages = parsePages(copy);
 
-  onMount(() => {
+  const debug = () => {
     setTimeout(() => {
       [].concat([...document.querySelectorAll(".page")]).forEach((node, i) => {
         const { height } = node.getBoundingClientRect();
         console.log(i + 1, "-", Math.round(height));
       });
     }, 2000);
+  };
+
+  onMount(() => {
+    if (window.location.href.includes("localhost:3000")) debug();
     [].concat([...document.querySelectorAll("article a, figcaption a")]).forEach((node) => {
       node.setAttribute("target", "_blank");
     });
