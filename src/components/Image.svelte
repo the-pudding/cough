@@ -21,7 +21,6 @@
   figure {
     margin: 0 auto;
     margin-bottom: 2rem;
-    display: inline-block;
   }
 
   figcaption {

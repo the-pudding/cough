@@ -38,7 +38,7 @@ main {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 1.825em;
 	line-height: 1.2;
 	margin-bottom: 1rem;
 }
@@ -62,6 +62,13 @@ p {
 td, th {
 	border: 1px solid currentColor;
 	font-weight: normal;
+}
+
+
+figure {
+	max-width: 30rem;
+	margin: 0 auto;
+	width: 100%;
 }
 
 figure p {
@@ -89,4 +96,14 @@ figure .inner {
 	/* max-width: 25rem;
 	display: block;
 	margin: 0 auto; */
+}
+
+@media only screen and (min-width: 1024px) {
+	h1 {
+		font-size: 2em;
+	}
+
+	figure {
+		display: inline-block;
+	}
 }

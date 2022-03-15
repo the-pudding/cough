@@ -70,6 +70,7 @@
 <style>
   article {
     counter-reset: page-number;
+    padding-bottom: 4rem;
   }
 
   .page {
@@ -77,24 +78,24 @@
     counter-increment: page-number;
   }
 
-  .page:after {
-    content: "Page " counter(page-number);
-    display: block;
-    position: absolute;
-    bottom: 0.5rem;
-    left: 0;
-    width: 100%;
-    text-align: center;
-  }
   @media only screen and (min-width: 1024px) {
     .page {
-      /* background: pink; */
       border-bottom: 1px solid var(--color-gray-500);
       margin-bottom: 6rem;
       column-count: 2;
       column-gap: 2rem;
       height: 800px;
       overflow: hidden;
+    }
+
+    .page:after {
+      content: "Page " counter(page-number);
+      display: block;
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0;
+      width: 100%;
+      text-align: center;
     }
   }
 </style>

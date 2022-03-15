@@ -34,10 +34,8 @@
 
 <style>
   figure {
-    max-width: 40em;
     margin: 0 auto;
     margin-bottom: 2rem;
-    display: inline-block;
   }
 
   .inner {
