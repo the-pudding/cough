@@ -1,6 +1,6 @@
 {
 	"name": "svelte-starter",
-	"version": "3.0.13",
+	"version": "3.0.14",
 	"scripts": {
 		"gdoc": "node tasks/fetch-google.js",
 		"style": "node tasks/style-dictionary.js",
@@ -19,8 +19,8 @@
 		"d3": "^7.3.0",
 		"feather-icons": "^4.28.0",
 		"lodash.debounce": "^4.0.8",
-		"node-fetch": "^3.2.0",
-		"postcss": "^8.4.6",
+		"node-fetch": "^3.2.3",
+		"postcss": "^8.4.8",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.6.0",
 		"rollup-plugin-svg": "^2.0.0",
