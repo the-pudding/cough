@@ -5,6 +5,7 @@
   import Title from "$components/Title.svelte";
   import References from "$components/References.svelte";
   import Acknowledgements from "$components/Acknowledgements.svelte";
+  import Note from "$components/Note.svelte";
   import copy from "$data/doc.json";
   import parsePages from "$utils/parsePages.js";
 
@@ -51,6 +52,9 @@
       {/if}
     </div>
   {/each}
+  <div class="page">
+    <Note title="Editor’s Note" content={copy.note} />
+  </div>
 
   <!-- <div class="page">
     
