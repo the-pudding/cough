@@ -33,10 +33,6 @@
     font-size: 0.9em;
   }
 
-  img {
-    width: 100%;
-  }
-
   :global(.figure-image svg) {
     display: block;
     width: 100%;
