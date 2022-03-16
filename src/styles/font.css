@@ -2,12 +2,14 @@
 	font-family: 'Computer Modern';
 	src: url('https://pudding.cool/assets/fonts/computer-modern/cmunrm.woff2');
 	font-weight: 400;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Computer Modern';
 	src: url('https://pudding.cool/assets/fonts/computer-modern/cmunrb.woff2');
 	font-weight: 600;
+	font-display: swap;
 }
 
 
