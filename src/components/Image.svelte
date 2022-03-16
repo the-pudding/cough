@@ -1,13 +1,17 @@
 <script>
+  import batman from "$svg/batman.svg";
+  import flow from "$svg/flow.svg";
+  import winners from "$svg/winners.svg";
   export let file;
   export let fig;
   export let caption;
-  export let alt;
+
+  const svg = { batman, flow, winners };
 </script>
 
 <figure class="figure-image">
   <div class="inner">
-    <img src="assets/{file}" {alt} />
+    {@html svg[file]}
   </div>
   <figcaption>
     <div class="inner">
@@ -30,6 +34,11 @@
   }
 
   img {
+    width: 100%;
+  }
+
+  :global(.figure-image svg) {
+    display: block;
     width: 100%;
   }
 </style>

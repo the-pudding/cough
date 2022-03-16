@@ -1,12 +1,14 @@
 @import "variables.css";
 @import "normalize.css";
 @import "reset.css";
+@import "font.css";
+
 
 /* colors defined in variables.css */
 :root {
 	/* font */
 	--sans: Helvetica, Arial, sans-serif;
-	--serif: "Times New Roman", serif;
+	--serif: "Computer Modern", "Times New Roman", serif;
 	--mono: monospace;
 	
 	/* z-index */
@@ -32,7 +34,7 @@
 }
 
 main {
-	max-width: 60rem;
+	max-width: 50rem;
 	margin: 0 auto;
 	padding: 0 1rem;
 }
@@ -41,17 +43,18 @@ h1 {
 	font-size: 1.825em;
 	line-height: 1.2;
 	margin-bottom: 1rem;
+	margin-top: 1rem;
 }
 
 h2 {
 	font-size: 1.625em;
-	margin-top: 0;
+	margin-top: 3rem;
 	margin-bottom: 1rem;
 }
 
 h3 {
 	font-size: 1.325em;
-	margin-top: 0;
+	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
 
@@ -66,7 +69,7 @@ td, th {
 
 
 figure {
-	max-width: 30rem;
+	max-width: 28rem;
 	margin: 0 auto;
 	width: 100%;
 }
@@ -88,7 +91,7 @@ figure table {
 
 /* flow */
 .figure-image:first-of-type img {
-	height: 36em;
+	/* height: 36em; */
 }
 
 

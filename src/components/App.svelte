@@ -28,7 +28,7 @@
   });
 </script>
 
-<WIP />
+<WIP text={copy.note} />
 <article>
   {#each pages as content, i}
     <div class="page">
@@ -52,9 +52,6 @@
       {/if}
     </div>
   {/each}
-  <div class="page">
-    <Note title="Editor’s Note" content={copy.note} />
-  </div>
 
   <!-- <div class="page">
     
@@ -86,7 +83,7 @@
     counter-increment: page-number;
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 10024px) {
     .page {
       border-bottom: 1px solid var(--color-gray-500);
       margin-bottom: 6rem;
