@@ -22,11 +22,6 @@
 </figure>
 
 <style>
-  figure {
-    margin: 0 auto;
-    margin-bottom: 2rem;
-  }
-
   figcaption {
     margin-top: 0.5rem;
     line-height: 1.2;

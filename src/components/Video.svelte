@@ -28,16 +28,11 @@
   </div>
   <figcaption>
     Fig. {fig}
-    {@html caption}. <button on:click={() => (yt = true)}>Play Clip</button>
+    {@html caption}. <button on:click={() => (yt = !yt)}>{yt ? "Stop" : "Play"} Clip</button>
   </figcaption>
 </figure>
 
 <style>
-  figure {
-    margin: 0 auto;
-    margin-bottom: 2rem;
-  }
-
   .inner {
     position: relative;
   }

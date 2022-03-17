@@ -5,7 +5,7 @@
 </script>
 
 <section id="title">
-  <h1>{copy.hed}</h1>
+  <h1>{@html copy.hed}</h1>
   <p>
     {#each copy.authors as name, i}
       <a target="_blank" href="https://pudding.cool/author/{slug(name)}"
