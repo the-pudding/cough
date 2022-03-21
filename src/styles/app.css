@@ -37,6 +37,7 @@ main {
 	max-width: 50rem;
 	margin: 0 auto;
 	padding: 0 1rem;
+	font-size: 16px;
 }
 
 h1 {
@@ -103,6 +104,10 @@ figure .inner {
 }
 
 @media only screen and (min-width: 1024px) {
+	main {
+		font-size: 18px;
+	}
+	
 	h1 {
 		font-size: 2em;
 	}
