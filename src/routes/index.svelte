@@ -11,5 +11,10 @@
   description={copy.description}
   url={copy.url}
   keywords="oscars, academy awards, coughs, data, research"
+  preloadFont={[
+    "https://pudding.cool/assets/fonts/computer-modern/cmunrm.woff2",
+    "https://pudding.cool/assets/fonts/computer-modern/cmunrb.woff2",
+    "https://pudding.cool/assets/fonts/computer-modern/cmunsl.woff2"
+  ]}
 />
 <App />
