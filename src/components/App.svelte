@@ -5,7 +5,6 @@
   import Title from "$components/Title.svelte";
   import References from "$components/References.svelte";
   import Acknowledgements from "$components/Acknowledgements.svelte";
-  import Note from "$components/Note.svelte";
   import copy from "$data/doc.json";
   import parsePages from "$utils/parsePages.js";
 
@@ -52,55 +51,11 @@
       {/if}
     </div>
   {/each}
-
-  <!-- <div class="page">
-    
-    <Section numeral="II" title="Methods and Materials" content={copy.methods} />
-  </div>
-
-  <div class="page">
-    <Section numeral="III" title="Results" content={copy.results} />
-  </div>
-
-  <div class="page">
-    <Section numeral="IV" title="Discussion" content={copy.discussion} />
-    <Section numeral="V" title="Conclusions" content={copy.conclusions} />
-  </div>
-
-  <div class="page">
-    <Section title="Acknowledgement" content={copy.acknowledgement} />
-  </div> -->
 </article>
 
 <style>
   article {
     counter-reset: page-number;
     padding-bottom: 4rem;
-  }
-
-  .page {
-    position: relative;
-    counter-increment: page-number;
-  }
-
-  @media only screen and (min-width: 10024px) {
-    .page {
-      border-bottom: 1px solid var(--color-gray-500);
-      margin-bottom: 6rem;
-      column-count: 2;
-      column-gap: 2rem;
-      height: 800px;
-      overflow: hidden;
-    }
-
-    .page:after {
-      content: "Page " counter(page-number);
-      display: block;
-      position: absolute;
-      bottom: 0.5rem;
-      left: 0;
-      width: 100%;
-      text-align: center;
-    }
   }
 </style>
