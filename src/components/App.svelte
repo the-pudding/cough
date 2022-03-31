@@ -47,8 +47,8 @@
         <Chunk {type} {value} />
       {/each}
       {#if i === pages.length - 1}
-        <Note title="Editor’s Note" content={copy.acknowledgements} />
-        <Acknowledgements title="Acknowledgements" content={copy.note} />
+        <Note title="Editor’s Note" content={copy.note} />
+        <Acknowledgements title="Acknowledgements" content={copy.acknowledgements} />
         <References title="References" content={copy.references} />
       {/if}
     </div>
