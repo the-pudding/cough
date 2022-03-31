@@ -7,7 +7,7 @@
   {#each text as { value }, i}
     <p>
       <em
-        >{#if i === 0}Editor’s Note: {/if}{@html value}</em
+        >{#if i === 0}Authors’ Note: {/if}{@html value}</em
       >
     </p>
   {/each}

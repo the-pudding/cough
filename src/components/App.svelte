@@ -5,6 +5,7 @@
   import Title from "$components/Title.svelte";
   import References from "$components/References.svelte";
   import Acknowledgements from "$components/Acknowledgements.svelte";
+  import Note from "$components/Note.svelte";
   import copy from "$data/doc.json";
   import parsePages from "$utils/parsePages.js";
 
@@ -46,7 +47,8 @@
         <Chunk {type} {value} />
       {/each}
       {#if i === pages.length - 1}
-        <Acknowledgements title="Acknowledgements" content={copy.acknowledgements} />
+        <Note title="Editor’s Note" content={copy.acknowledgements} />
+        <Acknowledgements title="Acknowledgements" content={copy.note} />
         <References title="References" content={copy.references} />
       {/if}
     </div>
