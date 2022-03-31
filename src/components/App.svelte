@@ -27,7 +27,7 @@
   });
 </script>
 
-<WIP text={copy.note} />
+<WIP text={copy.authorNote} />
 <article>
   {#each pages as content, i}
     <div class="page">
